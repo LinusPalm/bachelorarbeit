@@ -1,0 +1,19 @@
+{
+    "program": "java",
+    "arguments": [
+        "-DnodeId=${node}",
+        "-cp",
+        "${baseDir}/flink-cep/cep-engine-1.0.jar:${baseDir}/flink-cep/lib/*",
+        "com.huberlin.DataStreamJob",
+        "-config",
+        "${{config}}",
+        "-plan",
+        "${{plan}}",
+        "-node",
+        "${node}"
+    ],
+    "cwd": "${{baseDir}}/flink-cep/",
+    "defaults": {
+        "config": "${baseDir}/config_cluster_full.json"
+    }
+}
