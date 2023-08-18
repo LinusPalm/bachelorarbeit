@@ -1,0 +1,19 @@
+{
+    "program": "/home/linus/.sdkman/candidates/java/11.0.19-amzn/bin/java",
+    "arguments": [
+        "-DnodeId=${node}",
+        "-cp",
+        "${{baseDir}}/flink-cep/lib/*:cep-engine-1.0.jar",
+        "com.huberlin.DataStreamJob",
+        "-config",
+        "${{config}}",
+        "-plan",
+        "${{plan}}",
+        "-node",
+        "${node}"
+    ],
+    "defaults": {
+        "config": "${{baseDir}}/flink-cep/config.wsl.local.json"
+    },
+    "cwd": "${{baseDir}}/flink-cep"
+}
